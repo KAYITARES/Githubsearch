@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+p{
+    background-color: black;
+    color:whitesmoke;
+    font-size:48px;
+    text-align: center;
+    height:150PX;
+    padding-top:30PX;
+
+}
