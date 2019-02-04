@@ -1,5 +1,10 @@
-#search{
+#user{
     width:20%;
-    margin-top:2%;
+    margin-top:3%;
     margin-left:10%;
+}
+#searchButton{
+    margin-top:-3%;
+    margin-left:31%;
+
 }

@@ -1,8 +1,12 @@
 
-<form>
+<form (ngSubmit)='submitUser()' #userForm='ngForm'>
   <div class="form-group">
-    <input type="text" required class="form-control" id="search">
-    <button type="submit" class="btn btn-info" id="searcButton">SEARCH</button>
+    <input type="text"  class="form-control" id="user" [(ngModel)]="newUser.userss" name="userss" #userss="ngModel" required>
+    
+    <div [hidden]="userss.valid ||userss.pristine" class="alert alert-danger">
+        <p>UserName used in github is Required</p>
+      </div>
+    <button type="submit" class="btn btn-info" id="searchButton">SEARCH</button>
 
   </div>
 </form>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import {User} from '../user';
 
 @Component({
   selector: 'app-user-form',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
+newUser=new User("");
+@Output() addUser=new EventEmitter<User>();
 
+submitUser(){
+  this.addUser.emit(this.newUser);
+}
   constructor() { }
 
   ngOnInit() {
