@@ -6,7 +6,8 @@ import { Key } from 'protractor';
 
 export const environment = {
   production: false,
-  api_Key:"c63d7470f4b5759fe15a569f9b2fc2368a355c86 " 
+  // api_Key:"c63d7470f4b5759fe15a569f9b2fc2368a355c86 " 
+  api_Key: "14842bafc98a0e24c7758efd4d24b36adf0113fa"
 
 };
 

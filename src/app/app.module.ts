@@ -11,8 +11,9 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from '@angular/router';
+import { DateCountPipe } from './date-count.pipe';
 const routes:Routes=[
-  {path:"users",component:UserComponent},
+  // {path:"users",component:UserComponent},
   {path:"about",component:AboutComponent}
 ]
 
@@ -23,6 +24,7 @@ const routes:Routes=[
     UserComponent,
     StrikethroughDirective,
     AboutComponent,
+    DateCountPipe,
     
   ],
   imports: [
