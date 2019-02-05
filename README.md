@@ -6,5 +6,10 @@ The Github search project is a web project that user can have to enter the usern
 #Specifications
 The web application will request the user to enter the username github,when he/she finish typing the username they automatically receive the name she/he type.the number of the re[pository that he/she have on that github.the number of the followers (the number of the ones who he/she follow). it also show the number of following, the journey or date ,it also show the github link where you have to click on it and will automatically let you reach there original github.
 
+* to access my website you have to have a computer or smart phone
+* access internet on that device
+* go to browser and type https://KAYITARES.github.io/githubsearch
+* you have reach on it.
+
 
 
