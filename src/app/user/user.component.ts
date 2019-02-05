@@ -4,6 +4,8 @@ import {UserService} from '../users/user.service';
 import {AlertsService} from '../alert-service/alerts.service';
 import {Repository} from '../repository-class/repository';
 import { HttpClient } from '@angular/common/http';
+import { checkAndUpdateBinding } from '@angular/core/src/view/util';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-user',
@@ -18,25 +20,43 @@ export class UserComponent implements OnInit {
   //addNewUser(user){
     //this.users.push(user)
   //}
-  repository:Repository;
-  users:any;
-  alertService:AlertsService;
+  username:User;
+   repos:Repository;
   
-  constructor(userService:UserService, alertService:AlertsService, private http:HttpClient) {
-    this.users = userService.getUsers();
-    this.alertService=alertService;//make service available to the class
-   }
-
-  ngOnInit() {
-    interface ApiResponse{
-      name:string;
-      description:string
-    }
-    this.http.get<ApiResponse>("https://api.github.com/users/KAYITARES?access_token=f637cd1f068024aadfcb41dde68b743bc37bc53f").subscribe(data=>{
-      this.repository= new Repository(data.name,data.description)
+  
+   
+   check(rep){
+     interface ApiResponse{
+       login:string;
+       public_repos:number;
+        followers:number;
+       following:number;
+       created_at:Date;
+       html_url:string;
+     }
+     this.http.get<ApiResponse>("https://api.github.com/users/"+rep.username +"?access_token="+ environment.api_Key).subscribe(data=>{
+      this.repos.login=data.login;
+      this.repos.public_repos=data.public_repos;
+      this.repos.followers=data.followers;
+      this.repos.created_at=data.created_at;
+      this.repos.html_url=data.html_url
 
     })
-
+    console.log(this.repos)
+    }
+    constructor(private http:HttpClient){
+      this.repos=new Repository("",0,0,0,new Date(),"")  
   }
+  
+  ngOnInit(){}
 
+
+  
 }
+
+
+
+
+ 
+  
+  

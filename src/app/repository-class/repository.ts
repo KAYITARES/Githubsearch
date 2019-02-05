@@ -1,3 +1,3 @@
 export class Repository {
-    constructor(public name:string,public description:string){}
+    constructor(public login:string,public public_repos:number,public followers:number, public following:number,public created_at:Date,public html_url:string ){}
 }
