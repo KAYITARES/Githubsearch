@@ -25,6 +25,11 @@ Technologies Used
 3. typescript
 4. node
 5. Html
+#Support and contact details
+Contact me on cyntkayitare@gmail.com for any comments, reviews or advice.
+
+#License
+**MIT ** (c) KAYITARE Cynthia
 
 
 
