@@ -1,5 +1,6 @@
 <div class="row">
     <div class="col-md-6">
+        
             <app-user-form (addUser)="check($event)"></app-user-form>
 
             <p *ngFor='let user of User'>{{usersss.userss}}</p>
@@ -8,13 +9,18 @@
     <div class="col-md-6">
             <blockquote class="text-center text-lg">
                     <div class="well">
-                    <p>USERNAME  {{repos.login}}</p>
-                    <P>NUMBER of REPOSITORY  {{repos.public_repos}}</P>
-                    <p>FOLLOWERS {{repos.followers}}</p>
-                    <p>FOLLOWING {{repos.following}}</p>
-                    <p>CREATED_at  {{repos.created_at}}</p>
-                    <a href="{{repos.html_url}}">Github-Link </a> 
-                </div>
+                        
+                                    <img src="https://avatars0.githubusercontent.com/u/45564105?s=400&v=4" width="200px">   
+                             
+                              <h3>Username {{repos.login}}</h3>
+                    <h3>Repository: {{repos.public_repos}}</h3>
+                    <h3>Followers: {{repos.followers}}</h3>
+                    <h3>Following: {{repos.following}}</h3>
+                    <h3>CREATED_at  {{repos.created_at}}</h3>
+                    <h3><a href="{{repos.html_url}}">Github-Link </a> </h3>
+                
+                    </div>   
+                    
                 </blockquote>
 
     </div>

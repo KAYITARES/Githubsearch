@@ -1,12 +1,14 @@
-
+<div class="well">
 <form (ngSubmit)="submitUser()">
+    <h3>Github-Username</h3>
   <div class="form-group">
     <input type="text"  class="form-control" id="user" [(ngModel)]="newUser.username" name="username" #username="ngModel" required>
-    
+    <button type="submit" class="btn btn-info" id="searchButton">SEARCH</button>
     <div [hidden]="username.valid ||username.pristine" class="alert alert-danger">
         <p>UserName used in github is Required</p>
       </div>
-    <button type="submit" class="btn btn-info" id="searchButton">SEARCH</button>
+    
 
   </div>
 </form>
+</div>
