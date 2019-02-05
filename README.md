@@ -16,19 +16,9 @@ The web application will request the user to enter the username github,when he/s
 #Preview
  <a href="https://KAYITARES.github.io/githubsearch" rel="nofollow">Click here</a>here to see the live site.
 
-Known Bugs
+#Known Bugs
 No bugs so far. but you can steel make a research on how the one who has more upvoted is the one who will be placed at the top. If found, email me at cyntkayitare@gmail.com
 
-Technologies Used
-1. Angular
-2. Bootstrap
-3. typescript
-4. node
-5. Html
-Support and contact details
-Contact me on cyntkayitare@gmail.com for any comments, reviews or advice.
 
-License
-**MIT ** (c) KAYITARE Cynthia
 
 
