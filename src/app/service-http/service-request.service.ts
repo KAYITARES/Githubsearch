@@ -16,7 +16,7 @@ items;
     console.log("service is now ready");
     this.username ='KAYITARES';
     this.user = new User("");
-    this.repos = new Repository("",0,0,0,new Date(),"")
+    this.repos = new Repository("",0,0,0,new Date(),"","")
   }
   getProfileInfo(username){
     console.log(username);
@@ -27,7 +27,7 @@ items;
        following:number;
        created_at:Date;
        html_url:string;
-     
+       avatar_url:string;
     }
     const promise = new Promise((resolve, reject) =>{
       this.http.get<ApiResponse>("https://api.github.com/users/"+username +"?access_token="+ environment.api_Key).subscribe(data=>{
@@ -35,7 +35,8 @@ items;
         this.repos.public_repos=data.public_repos;
         this.repos.followers=data.followers;
         this.repos.created_at=data.created_at;
-        this.repos.html_url=data.html_url
+        this.repos.html_url=data.html_url;
+        this.repos.avatar_url=data.avatar_url
         resolve();
   
       })
@@ -50,6 +51,7 @@ items;
        following:number;
        created_at:Date;
        html_url:string;
+       avatar_url:string;
       
   }
   this.http.get<ApiResponse>("https://api.github.com/users/"+username +"?access_token="+ environment.api_Key).subscribe(data=>{ 
