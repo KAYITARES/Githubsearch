@@ -29,7 +29,7 @@ Technologies Used
 Contact me on cyntkayitare@gmail.com for any comments, reviews or advice.
 
 ### License
-**MIT ** (c) KAYITARE Cynthia
+**[MIT](http://choosealisence.com/licenses/mit)** (c) **KAYITARE Cynthia**
 
 
 
