@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
        html_url:string;
        avatar_url:string;
      }
-     this.http.get<ApiResponse>("https://api.github.com/users/"+rep.username +"?access_token="+ environment.api_Key).subscribe(data=>{
+     this.http.get<ApiResponse>("https://api.github.com/users/"+rep.username +"?access_token="+ "7377647d064385d967e03bfbffdc62983c19341a").subscribe(data=>{
       this.repos.login=data.login;
       this.repos.public_repos=data.public_repos;
       this.repos.followers=data.followers;
